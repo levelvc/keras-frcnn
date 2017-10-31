@@ -219,6 +219,10 @@ for idx, img_name in enumerate(sorted(os.listdir(img_path))):
 
 	all_dets = []
 
+	if "person" in bboxes.keys():
+		cv2.imwrite('./results_imgs/{}.png'.format(idx), img)
+
+	'''
 	for key in bboxes:
 		bbox = np.array(bboxes[key])
 
@@ -247,3 +251,4 @@ for idx, img_name in enumerate(sorted(os.listdir(img_path))):
 	#cv2.imshow('img', img)
 	#cv2.waitKey(0)
 	cv2.imwrite('./results_imgs/{}.png'.format(idx),img)
+	'''
