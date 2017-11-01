@@ -220,7 +220,7 @@ for idx, img_name in enumerate(sorted(os.listdir(img_path))):
 	all_dets = []
 
 	if "person" in bboxes.keys():
-		cv2.imwrite('./results_imgs/{}.png'.format(idx), img)
+		cv2.imwrite('./results_imgs/{}.jpg'.format(idx), img)
 
 	'''
 	for key in bboxes:
