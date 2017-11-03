@@ -6,6 +6,7 @@ import time
 import numpy as np
 from optparse import OptionParser
 import pickle
+import os
 
 from keras import backend as K
 from keras.optimizers import Adam, SGD, RMSprop
@@ -15,6 +16,7 @@ from keras_frcnn import config, data_generators
 from keras_frcnn import losses as losses
 import keras_frcnn.roi_helpers as roi_helpers
 from keras.utils import generic_utils
+from keras.models import load_model
 
 sys.setrecursionlimit(40000)
 
